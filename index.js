@@ -8,6 +8,8 @@
     //
     // Manage Main-Screen
     //
+    const menuLeft = document.querySelector("img[src='img/left_arrow_white.png']");
+    if (menuLeft != null) {menuLeft.click();}
     const menuBattleship = document.querySelector("#army_box_btn");
     if (menuBattleship != null) {menuBattleship.click();}
 
@@ -75,7 +77,7 @@
     await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
 
     //
-    // Manage Smithy
+    // Manage Barrrack
     //
     const menuBarrack = document.querySelector("#barrack_box_btn");
     if (menuBarrack != null) {menuBarrack.click();}
@@ -83,11 +85,11 @@
     await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
 
     // Restore Troops
-    const buttonBarrackBack = document.querySelector("#hero_back_button");
-    if (buttonBarrackBack != null) {
-      buttonBarrackBack.click();
-      await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
-    }
+    // const buttonBarrackBack = document.querySelector("#hero_back_button");
+    // if (buttonBarrackBack != null) {
+    //   buttonBarrackBack.click();
+    //   await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+    // }
 
     const amountCraftedTroops = document.querySelector("#barrack_produced").innerText;
     const buttonCraftedTroops = document.querySelector("#barrack_progress_status");
@@ -103,6 +105,39 @@
     //
     // Manage Farms
     //
-    
+    const menuRight = document.querySelector("img[src='img/right_arrow_white.png']");
+    if (menuRight != null) {menuRight.click();}
+    await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+
+    const menuFarms = document.querySelector("img[src='img/farm_button.png']");
+    if (menuFarms != null) {menuFarms.click();}
+    await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+
+    // Mint Farms
+    const firstFarm = document.querySelector("#farm_1");
+    if (firstFarm != null) {
+      firstFarm.click(); 
+      await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+    }
+    const buttonFirstFarm = document.querySelector("img[src='img/timer75.png']");
+    if (buttonFirstFarm != null) {
+      buttonFirstFarm.click(); 
+      await new Promise((res) => setTimeout(res, PAUSE_MINING));
+    }
+    await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+
+    const secondFarm = document.querySelector("#farm_2");
+    if (secondFarm != null) {
+      secondFarm.click(); 
+      await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+    }
+    const buttonSecondFarm = document.querySelector("img[src='img/timer75.png']");
+    if (buttonSecondFarm != null) {
+      buttonSecondFarm.click(); 
+      await new Promise((res) => setTimeout(res, PAUSE_MINING));
+    }
+    await new Promise((res) => setTimeout(res, PAUSE_BETWEEN));
+
+    //TODO Mint Boats
   }
 })();
